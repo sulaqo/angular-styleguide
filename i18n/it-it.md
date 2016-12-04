@@ -30,7 +30,7 @@ che c'è dietro a quelle nuove [qui](https://toddmotto.com/rewriting-angular-sty
     1. [Convenzioni sui nomi dei files](#file-naming-conventions)
     1. [Struttura files scalabile](#scalable-file-structure)
   1. [Components](#components)
-    1. [Teoria](#component-theory)
+    1. [Teoria](#teoria-del-componente)
     1. [Proprietà supportate](#supported-properties)
     1. [Controllers](#controllers)
     1. [Flusso dati unidirezionale ed eventi](#one-way-dataflow-and-events)
@@ -265,7 +265,7 @@ La cartella di più alto livello contiene semplicemente index.html and app/ , la
 
 # Components
 
-### Component theory
+### Teoria del Component 
 
 I Components sono essenzialmente templates con un controller. Essi _non_ sono delle direttive, né si dovrebbe sostituire la direttive con i components, fino a che non effettui un upgrade dei "templates delle direttive" con controllers, che sono più adatte come componente. I components contengono anche dei legami che definiscono entrata ed uscita dei dati e degli eventi, i punti di ancoraggio del ciclo di vita del componente e l'abilità di usare il flusso dati unidirezionale ed oggetti di tipo evento (event objects) per ottenere i dati dal componente genitore. Questi sono di fatto lo standard in Angular 1.5 e superiori. Tutto quello che è basato su controllers e templates somiglierà a un component, che potrebbe essere dinamico , privo di stato o un componente mappato. Puoi pensare ad un "component" come un pezzo di codice completo, non solo come la definzione dell'oggetto `.component()`.Esploriamo alcune linee guida e consigli per i components, per poi passare ai concetti di come dovrebbero essere strutturati in modo dinamico , privo di stato e mappato.
 
